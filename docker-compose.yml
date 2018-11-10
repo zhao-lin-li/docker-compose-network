@@ -7,6 +7,10 @@ services:
 
   dependent-service1:
     image: tomcat:9.0.12
+    volumes:
+    - ./index.dependent-service1.html:/usr/local/tomcat/webapps/ROOT/index.html
 
   dependent-service2:
     image: tomcat:9.0.12
+    volumes:
+    - ./index.dependent-service2.html:/usr/local/tomcat/webapps/ROOT/index.html
